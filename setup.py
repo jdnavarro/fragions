@@ -1,5 +1,4 @@
 from setuptools import setup, find_packages
-import sys
 
 version = '0.1dev'
 
@@ -17,11 +16,12 @@ setup(name='fragions',
       packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
       include_package_data=True,
       zip_safe=False,
-      install_requires=[
+      install_requires=['numpy']
           # -*- Extra requirements: -*-
       ],
       entry_points="""\
         [console_scripts]
           exp_db.py = fragions.exp_db:main
+          dump_csv.py = fragions.dump_csv:main
       """
       )
